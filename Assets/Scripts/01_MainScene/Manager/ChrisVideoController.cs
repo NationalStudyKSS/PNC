@@ -10,6 +10,10 @@ public class ChrisVideoController : MonoBehaviour
 
     public void ShowVideoPanel()
     {
+        Color color = _rawImage.color;
+        color.a = 0f;
+        _rawImage.color = color;
+
         _videoPanel.SetActive(true); // 패널을 보여줌
 
         _videoPlayer.renderMode = VideoRenderMode.APIOnly;
