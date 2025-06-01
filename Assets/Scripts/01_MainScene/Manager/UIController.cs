@@ -6,7 +6,6 @@ using static UnityEngine.GraphicsBuffer;
 public class UIController : MonoBehaviour
 {
     [SerializeField] GameObject _uiPanel;
-    [SerializeField]
     // Start is called before the first frame update
 
 
@@ -20,14 +19,14 @@ public class UIController : MonoBehaviour
             _uiPanel.SetActive(!_uiPanel.activeSelf);
         }
     }
-    public void ClosePanel(GameObject nowPanel, GameObject clickedPanel)
+
+    public void PanelClick(GameObject nowPanel, GameObject clickedPanel)
     {
         if (clickedPanel != null)
+        {
             nowPanel.SetActive(false);
+            clickedPanel.SetActive(true);
+        }
     }
-    public void OpenPanel(GameObject panel)
-    {
-        if (panel != null)
-            panel.SetActive(true);
-    }
+    
 }
