@@ -34,4 +34,9 @@ public class ChrisVideoController : MonoBehaviour
 
         _videoPlayer.prepareCompleted -= OnPrepared; // 중복 방지
     }
+
+    public void GoBack()
+    {
+        _videoPanel.SetActive(false); // 비디오 패널 숨김
+    }
 }
